@@ -1,75 +1,84 @@
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <h1>Finance Dashboard</h1>
 
-        <!-- Summary Cards -->
-        <div class="summary-cards">
-            <div class="card">
-                <h3>Total Income</h3>
-                <p>₹6000</p>
-            </div>
-            <div class="card">
-                <h3>Total Expense</h3>
-                <p>₹500</p>
-            </div>
-            <div class="card">
-                <h3>Balance</h3>
-                <p>₹5500</p>
-            </div>
-        </div>
+<h1>Finance Dashboard</h1>
 
-        <!-- Insights -->
-        <div class="insights">
-            <h2>Insights</h2>
-            <ul>
-                <li>Highest spending category: Food</li>
-                <li>Income mainly from Salary & Freelance</li>
-                <li>Balance is healthy</li>
-            </ul>
-        </div>
+<!-- Role Switch (Static UI) -->
+<div class="role">
+  <label>Select Role:</label>
+  <select>
+    <option>Viewer</option>
+    <option>Admin</option>
+  </select>
+</div>
 
-        <!-- Transactions Table -->
-        <div class="transactions">
-            <h2>Transactions</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Category</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2026-04-01</td>
-                        <td>₹5000</td>
-                        <td>Salary</td>
-                        <td>Income</td>
-                    </tr>
-                    <tr>
-                        <td>2026-04-02</td>
-                        <td>₹200</td>
-                        <td>Food</td>
-                        <td>Expense</td>
-                    </tr>
-                    <tr>
-                        <td>2026-04-03</td>
-                        <td>₹1000</td>
-                        <td>Freelance</td>
-                        <td>Income</td>
-                    </tr>
-                    <tr>
-                        <td>2026-04-04</td>
-                        <td>₹300</td>
-                        <td>Transport</td>
-                        <td>Expense</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
-    </html>
+<!-- Summary Cards -->
+<div class="summary">
+  <div class="card income">Income ₹6000</div>
+  <div class="card expense">Expense ₹500</div>
+  <div class="card balance">Balance ₹5500</div>
+</div>
+<!-- Category Visualization -->
+<div class="section">
+  <h2>Spending Breakdown</h2>
+  <div class="pie">
+    <div class="slice food">Food</div>
+    <div class="slice travel">Travel</div>
+    <div class="slice other">Other</div>
+  </div>
+</div>
+
+<!-- Filter + Search UI -->
+<div class="controls">
+  <input type="text" placeholder="Search transactions...">
+  <select>
+    <option>All</option>
+    <option>Income</option>
+    <option>Expense</option>
+  </select>
+  <select>
+    <option>Sort by Date</option>
+    <option>Sort by Amount</option>
+  </select>
+</div>
+
+<!-- Transactions Table -->
+<div class="section">
+  <h2>Transactions</h2>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Category</th>
+      <th>Type</th>
+    </tr>
+    <tr>
+      <td>01-04-2026</td>
+      <td>₹5000</td>
+      <td>Salary</td>
+      <td>Income</td>
+    </tr>
+    <tr>
+      <td>02-04-2026</td>
+      <td>₹200</td>
+      <td>Food</td>
+      <td>Expense</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Insights -->
+<div class="section">
+  <h2>Insights</h2>
+  <p>Highest spending: Food</p>
+  <p>Stable income growth</p>
+</div>
+
+</body>
+</html>
